@@ -5,19 +5,19 @@
 # 你的博客名称，请用你想要的博客名替换“LOFFER”，以下修改都可类似处理
 # 注意，“name: LOFFER”，冒号后面的空格不可以省略。
 # 井号后面的文字是说明文档，不会被程序读取。
-name: Teages's Blog
+name: Teages的个人博客
 # 描述/签名
-description: Teages的个人博客
+description: Teages's Blog
 
 #
 # 下面的设定都是可选的
 #
 
 # 你的博客logo图片URL，建议尺寸不超过300px × 300px
-avatar: /main-source/Teages.png
+avatar: /main-source/Teages.jpg
 
 # 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
-favicon: /main-source/favicon.png
+favicon: /main-source/Teages.jpg
 
 
 # 菜单中的按钮
@@ -39,24 +39,24 @@ excerpt_separator: <!-- more -->
 
 # 你的社交网络链接，它们会作为图标出现在你的网站页脚中，可选填写
 footer-links: 
-  weibo: frommidworld #请输入你的微博个性域名 https://www.weibo.com/<thispart>
+  weibo: #请输入你的微博个性域名 https://www.weibo.com/<thispart>
   behance: # https://www.behance.net/<>
   dribbble: # https://dribbble.com/<>
-  email: fromendworld@outlook.com 
+  email: Teages@teages.xyz 
   facebook: #https://www.facebook.com/<>
   flickr: #https://www.flickr.com/<>
-  github: FromEndWorld/loffer #https://github.com/<>
+  github: Teages #https://github.com/<>
   instagram: #https://instagram.com/<>
   linkedin: #https://www.linkedin.com/in/<>
   pinterest: #https://www.pinterest.com/<>
-  rss: #随便填点啥RSS就能用了
+  rss: Teages #随便填点啥RSS就能用了
   stackoverflow: # http://stackoverflow.com/<>
   tumblr: # https://<username>.tumblr.com
-  twitter: # https://www.twitter.com/<your_twitter_username> 
+  twitter: Teages_L # https://www.twitter.com/<your_twitter_username> 
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # 站点页脚的文字
-footer-text: Copyright (c) 2019 来自中世界
+footer-text: Copyright (c) 2019 - 2020
 
 # 评论，注意，请不要同时添加多种不同的评论区
 
@@ -65,13 +65,13 @@ footer-text: Copyright (c) 2019 来自中世界
 
 # 输入Gitalk相关设定，即可添加评论区
 gitalk:
-  clientID: 
-  clientSecret: 
-  repo: 
-  owner: 
+  clientID: 1af62824c8d0c129d52e
+  clientSecret: ad0c76ff05b3d69c17dd0631c63f36427a22989f
+  repo: teages.github.io
+  owner: Teages
 
 # 输入Google Analytics web tracking code
-google_analytics:
+google_analytics: UA-137561154-1
 
 # 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
 url: blog.teages.xyz
@@ -79,14 +79,14 @@ url: blog.teages.xyz
 # 添加你的博客的二级域名，一般来说是你的repository名
 # 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
 # 那么就写成 "/repository-name"
-baseurl: /LOFFER
+baseurl: 
 
 
 #
 # !! 以下所有设置都不需要更改 !!
 #
 
-permalink: /:title/
+permalink: /pages/:title.html
 paginate_path: /page:num/
 
 # The release of Jekyll Now that you're using

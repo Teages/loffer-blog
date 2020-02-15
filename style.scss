@@ -320,7 +320,7 @@ img {
 //
 
 .wrapper-sidebar {
-  width: 30%;
+  width: 25%;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: $background-color;
@@ -351,7 +351,7 @@ img {
 
 .site-info {
   text-align:center;
-  margin: 100px auto 0;
+  margin: 10% auto 0;
 
   @include mobile {
     float: none;
@@ -430,7 +430,7 @@ nav {
 
 .wrapper-content {
   float: right;
-  width: 70%;
+  width: 75%;
 
   @include mobile {
     float: none;
@@ -531,9 +531,10 @@ nav {
 // TOC
 
 .toc {
-  width: 240px;
+  width: 270px;
   height: 100%;
-  left: 30%;
+  right: 0%;
+  background-color: $background-color;
   position: fixed;
   z-index: 4;
   padding: 60px 20px 0 20px;
@@ -559,7 +560,7 @@ nav {
 
 @media screen and (max-width:2200px) and (min-width:1200px){
   .withtoc{
-    padding-left: 260px;
+    padding-right: 260px;
   }
 }
 
