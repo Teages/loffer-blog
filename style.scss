@@ -537,7 +537,8 @@ nav {
   background-color: $background-color;
   position: fixed;
   z-index: 4;
-  padding: 60px 20px 0 20px;
+  padding: 10px 0px 0 5px;
+  overflow-y: auto;
   
   &:before{
     content:"目录";
