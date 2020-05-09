@@ -41,7 +41,7 @@ layout: default
         </div>
 
         <div class="entry">
-          {{ post.excerpt | truncate: 200 }}
+          {{ post.excerpt | truncate: 10000 }}
         </div>
 
         <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
@@ -51,38 +51,40 @@ layout: default
   
   {% for post in paginator.posts %}
     {% unless post.pinned %}
-    <article class="post">
-      <h1>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h1>
+      {% unless post.hide %}
+      <article class="post">
+        <h1>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </h1>
 
-      <div clsss="meta">
-        
-        <span class="author">
-          {{ post.author }}
-        </span>
-            
-        <span class="date">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </span>
+        <div clsss="meta">
+          
+          <span class="author">
+            {{ post.author }}
+          </span>
+              
+          <span class="date">
+            {{ post.date | date: "%Y-%m-%d" }}
+          </span>
 
-        <ul class="tag">
-          {% for tag in post.tags %}
-          <li>
-            <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-              {{ tag }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+          <ul class="tag">
+            {% for tag in post.tags %}
+            <li>
+              <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+                {{ tag }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
 
-      <div class="entry">
-        {{ post.excerpt | truncate: 200 }}
-      </div>
+        <div class="entry">
+          {{ post.excerpt | truncate: 800 }}
+        </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      </article>
+      {% endunless %}
     {% endunless %}
   {% endfor %}
 </div>
