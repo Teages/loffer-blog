@@ -1,20 +1,16 @@
 jQuery.easing.def = "easeInQuart";
-
-$(document).ready(function () {
-    $('#btn-search').click(function () {
-        $('#search-bar').show();
-        $('#btn-search').hide();
+var searchBarON = false;
+function startSearch() {
+    if (searchBarON == false) {
         $('#search-bar').animate({ width: '400px' });
         $('#search-clean').show();
-    });
-});
+    }
+}
 function closeSearchBar() {
-    if (document.getElementById("btn-search").value == "") {
-        $('#search-clean').animate({ display: 'none' });
+    var thing2Search=$("#search-input").val();
+    if (thing2Search == "") {
         $('#search-bar').animate({ width: '40px' });
-        $('#search-bar').animate({ display: 'none' });
-        $('#btn-search').animate({ display: 'inline' });
     } else {
-        document.getElementById("btn-search").value = "";
+        $("#search-input").val("");
     }
 }
