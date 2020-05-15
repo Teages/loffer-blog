@@ -23,7 +23,10 @@ body {
   font-family: $base-font;
   color: $base-color;
   line-height: 1.7em;
-  background: #343a40;
+  transition: 0.5s;
+  -moz-transition: 0.5s; /* Firefox 4 */
+  -webkit-transition: 0.5s; /* Safari and Chrome */
+  -o-transition: 0.5s; /* Opera */
 }
 
 .container {
@@ -332,6 +335,11 @@ img {
 	position: fixed;
 	z-index: 4;
   border-right: 1px solid $divider-color;
+
+  transition: 0.5s;
+  -moz-transition: 0.5s; /* Firefox 4 */
+  -webkit-transition: 0.5s; /* Safari and Chrome */
+  -o-transition: 0.5s; /* Opera */
 
   @include mobile {
     width: 100%;
@@ -690,6 +698,10 @@ nav {
   clear:both;
   width:100%;
   bottom:0;
+  transition: 0.5s;
+  -moz-transition: 0.5s; /* Firefox 4 */
+  -webkit-transition: 0.5s; /* Safari and Chrome */
+  -o-transition: 0.5s; /* Opera */
   
   @include mobile {
     display: none;
@@ -699,6 +711,10 @@ nav {
 
 .wrapper-footer-mobile {
   display: none;
+  transition: 0.5s;
+  -moz-transition: 0.5s; /* Firefox 4 */
+  -webkit-transition: 0.5s; /* Safari and Chrome */
+  -o-transition: 0.5s; /* Opera */
   
   @include mobile {
     display: block;
@@ -757,7 +773,7 @@ footer {
 .btn-top {
     display: none; /* hide the button at the beginning */
     position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */ 
+    bottom: 70px; /* Place the button at the bottom of the page */ 
     right: 30px; /* Place the button 30px from the right */ 
     z-index: 233; /* Make sure it does not overlap */ 
     border-width: 2px;
@@ -769,6 +785,8 @@ footer {
     width: 40px;
     border-radius: 50%; /* make it round */
     text-align: center;
+    font-size: large;
+
     &:visited {
       color: $background-color;
       border-color: $link-color;
@@ -780,6 +798,37 @@ footer {
     }  
 
 }
+
+
+// Dark Mode button 
+.btn-dark {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */ 
+  right: 30px; /* Place the button 30px from the right */ 
+  z-index: 233; /* Make sure it does not overlap */ 
+  border-width: 2px;
+  border-style: solid;
+  border-color: $link-color;
+  background-color: $link-color;
+  color: $background-color;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; /* make it round */
+  text-align: center;
+  font-size: large;
+
+  &:visited {
+    color: $background-color;
+    border-color: $link-color;
+  }
+  &:hover {
+    background-color: $background-color;
+    color: $link-color;
+    border-color: $link-color;
+  }  
+
+}
+
 
 
 //image-cover-modal
@@ -838,3 +887,332 @@ footer {
 @import "gitalk";
 
 
+
+
+
+
+
+
+
+//
+// Dark mode
+//
+
+body.dark-theme {
+  color: $base-color-dark;
+  background: #343a40;
+
+
+  h4 {
+    color: $base-lighten-color-dark;
+  }
+  
+  h6 {
+    color: $base-lighten-color-dark;
+  }
+  
+  p {
+    color: $text-color-dark;
+  }
+  
+  a {
+    color: $link-color-dark;
+  
+    &:hover, &:active {
+    color: $link-lighten-color-dark;
+    }
+  }
+  
+  hr {
+    border-top: 1px solid $divider-color-dark;
+  }
+  
+  // Yeun's list style
+  // https://gist.github.com/yeun/d824fc7b04b756508f4b0143535cec30
+  
+  // Table
+  table {
+    border: 1px solid $table-border-color-dark;
+  }
+  
+  td, th {
+    border: 1px solid $table-border-color-dark;
+  }
+  
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th {
+    background-color: $table-background-color-dark;
+  }
+  
+  // Blockquote
+  blockquote {
+    border-left: .2em solid $blockquote-border-color-dark;
+  
+    p {
+    color: $blockquote-color-dark;
+    }
+  }
+  
+  // Footnote
+  a.footnote {
+    &,
+    .post p &,
+    .post ol &,
+    .post ul & {
+    border: 1px solid $footnote-link-border-color-dark;
+  
+    &:hover {
+        background: $footnote-link-background-over-color-dark;
+    }
+    }
+  }
+  
+  .footnotes {
+    border-top: 1px solid $divider-color-dark;
+  }
+  
+  // Specify the color of the selection
+  ::-moz-selection {
+  //  color: $selection-color-dark;
+    background: $selection-background-color-dark;
+  }
+  ::selection {
+  //  color: $selection-color-dark;
+    background: $selection-background-color-dark;
+  }
+    
+  /*********************/
+  /* LAYOUT / SECTIONS */
+  /*********************/
+  
+  //
+  // .sidebar
+  //
+  
+  .wrapper-sidebar {
+    background-color: $background-color-dark;
+    border-right: 1px solid $divider-color-dark;
+  
+    @include mobile {
+    border-bottom: 1px solid $divider-color-dark;
+    }
+  }
+  
+  .site-name {
+    margin: 0 auto;
+    color: $base-color-dark;
+    cursor: pointer;
+    font-family: $base-font;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  
+  .site-description {
+    color: $base-lighten-color-dark;
+  }
+  
+  nav {
+    @include mobile {
+        color: $link-color-dark;
+    }
+    
+  }
+  
+  // Posts
+  
+  .posts{
+  
+    li {
+       
+        > a {
+        color: $base-color-dark;
+        background-color: $tag-index-label-background-color-dark;
+  
+        &:hover {
+            color: $link-color-dark;
+            background-color:$link-bghv-color-dark;
+        }
+        }
+    }
+    
+  }
+  
+  .posts > .post {
+    border-bottom: 1px solid $divider-color-dark;
+  }
+  
+  
+   .pinned .feather-anchor {
+    color: $base-lighten-color-dark;
+  }
+  
+  
+  .date {
+    color: $base-lighten-color-dark;
+  }
+  
+  .author{
+    color: $base-lighten-color-dark;
+  }
+  
+  
+  
+  // TOC
+  
+  .toc {
+    background-color: $background-color-dark;
+    
+    &:before{
+    border-bottom: 3px double $divider-color-dark;
+    }
+  }
+  
+  // pagination
+  
+  .pagination {
+    border-top: 1px solid $divider-color-dark;
+  
+    > .prev {
+    float: left;
+    width: 50%;
+    a {
+        color: $base-lighten-color-dark;
+        border: 1px solid $divider-color-dark;
+        background: $background-color-dark;
+  
+        &:hover, &:focus {
+        color: $link-lighten-color-dark;
+        border: 1px solid $link-lighten-color-dark;
+        background-color: $link-bghv-color-dark;
+        }
+    }
+    }
+  
+    > .next {
+    a {
+        color: $base-lighten-color-dark;
+        border: 1px solid $divider-color-dark;
+        background: $background-color-dark;
+  
+        &:hover, &:focus {
+        color: $link-lighten-color-dark;
+        border: 1px solid $link-lighten-color-dark;
+        background-color: $link-bghv-color-dark;
+        }
+    }
+    }
+  }
+  
+  // Archive
+  .archive {
+    a {
+    color: $base-color-dark;
+    }
+    time {
+    color: $base-lighten-color-dark;
+    }
+  }
+  
+  // Tags
+  .tags > .label {
+ 
+    > a {
+        color: $base-color-dark;
+        background-color: $tag-index-label-background-color-dark;
+  
+        &:hover {
+        background-color: $link-bghv-color-dark;
+        }
+        span {
+          &.count {
+            background-color: $tag-index-count-background-color-dark;
+          }
+        }
+    }
+    
+  }
+  
+  .tags > .tag {
+    a {
+    color: $base-color-dark;
+    }
+    time {
+    color: $base-lighten-color-dark;
+    }
+  }
+  
+  
+  
+  // Footer
+  .wrapper-footer-desktop {
+    border-top: 1px solid $footer-border-color-dark;
+    background-color: $footer-background-color-dark;
+  }
+  
+  .wrapper-footer-mobile {        
+    @include mobile {
+        border-top: 1px solid $footer-border-color-dark;
+        background-color: $footer-background-color-dark;
+    }
+  }
+  
+  footer {
+  
+    p {
+    color: $base-lighten-color-dark;
+    }
+  
+    .svg-icon {
+    
+        svg {
+            fill: $base-lighten-color-dark;
+            
+            &:hover {
+            fill: $link-lighten-color-dark;
+            }
+        }
+  
+    }
+  }
+  
+  // Back to Top button 
+  .btn-top {
+    border-color: $link-color-dark;
+    background-color: $link-color-dark;
+    color: $background-color-dark;
+    &:visited {
+        color: $background-color-dark;
+        border-color: $link-color-dark;
+    }
+    &:hover {
+        background-color: $background-color-dark;
+        color: $link-color-dark;
+        border-color: $link-color-dark;
+    }  
+  
+  }
+  
+  // Back to Top button 
+  .btn-dark {
+    border-color: $link-color-dark;
+    background-color: $link-color-dark;
+    color: $background-color-dark;
+    &:visited {
+        color: $background-color-dark;
+        border-color: $link-color-dark;
+    }
+    &:hover {
+        background-color: $background-color-dark;
+        color: $link-color-dark;
+        border-color: $link-color-dark;
+    }
+  
+  }
+  
+  textarea {
+    color: white;
+  }
+
+
+}

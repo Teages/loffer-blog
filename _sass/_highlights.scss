@@ -4,8 +4,8 @@ pre, code {
 
 code.highlighter-rouge {
   font-size: 90%;
-  color: $oc-indigo-4;
-  background-color: $oc-gray-7;
+  color: $oc-indigo-9;
+  background-color: $oc-gray-1;
   padding: .1em .2em;
   border-radius: 3px;
 }
@@ -18,7 +18,6 @@ pre.highlight {
   margin: 1em 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  background: #212121;
 }
 
 .highlight  { background: $oc-gray-0; }
@@ -81,3 +80,21 @@ pre.highlight {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+// Dark mode
+
+
+body.dark-theme {
+  code.highlighter-rouge {
+    color: $oc-indigo-4;
+    background-color: $oc-gray-7;
+  }
+  
+  pre.highlight {
+    background: #212121;
+  }
+  
+  .highlight  { background: rgba(1, 1, 1, 0); }
+  .highlight .ne { color: #f92672; font-weight: bold } /* Name.Exception */
+  .highlight .nf { color: #f92672; font-weight: bold } /* Name.Function */
+}
