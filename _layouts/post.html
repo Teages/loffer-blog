@@ -34,22 +34,22 @@ layout: default
 
 <div class="pagination">
   {% if page.previous.url %}
-    <span class="prev" >
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
-        ← 上一篇
-      </a>
-    </span>
+  <span class="prev">
+    <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
+      ← 上一篇
+    </a>
+  </span>
   {% endif %}
   {% if page.next.url %}
-    <span class="next" >
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
-        下一篇 →
-      </a>
-    </span>
+  <span class="next">
+    <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
+      下一篇 →
+    </a>
+  </span>
   {% endif %}
 </div>
 
 <dic class="comment">
   {% include disqus.html %}
   {% include gitalk.html %}
-</div>
+  </div>
