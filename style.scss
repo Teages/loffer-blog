@@ -254,6 +254,7 @@ a.footnote {
     border-radius: 2px;
     -webkit-text-stroke: 0.25px;
     -webkit-transition: 0.2s ease-out all;
+    transition: 0.2s ease-out all;
     text-decoration: none;
 
     &:hover {
@@ -549,6 +550,11 @@ nav {
   z-index: 4;
   padding: 10px 0px 0 5px;
   overflow-y: auto;
+
+  transition: 0.5s;
+  -moz-transition: 0.5s; /* Firefox 4 */
+  -webkit-transition: 0.5s; /* Safari and Chrome */
+  -o-transition: 0.5s; /* Opera */
   
   &:before{
     content:"目录";
@@ -769,12 +775,112 @@ footer {
   }
 }
 
+.btn-float {
+  position: fixed; /* Fixed/sticky position */
+  right: 30px; /* Place the button 30px from the right */ 
+  z-index: 233; /* Make sure it does not overlap */ 
+  border-width: 2px;
+  border-style: solid;
+  border-color: $link-color;
+  background-color: $link-color;
+  color: $background-color;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; /* make it round */
+  text-align: center;
+  font-size: large;
+
+  transition: background-color 0.5s, color 0.5s;
+  -moz-transition: background-color 0.5s, color 0.5s; /* Firefox 4 */
+  -webkit-transition: background-color 0.5s, color 0.5s; /* Safari and Chrome */
+  -o-transition: background-color 0.5s, color 0.5s; /* Opera */
+
+  &:visited {
+    color: $background-color;
+    border-color: $link-color;
+  }
+  &:hover {
+    background-color: $background-color;
+    color: $link-color;
+    border-color: $link-color;
+  }  
+
+  @include mobile {
+    right: 15px;
+  }
+
+}
+
 // Back to Top button 
 .btn-top {
     display: none; /* hide the button at the beginning */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 70px; /* Place the button at the bottom of the page */ 
-    right: 30px; /* Place the button 30px from the right */ 
+    bottom: 120px; /* Place the button at the bottom of the page */ 
+}
+
+// Dark Mode button 
+.btn-dark {
+  bottom: 70px; /* Place the button at the bottom of the page */ 
+}
+
+// Search button
+.btn-search {
+  bottom: 20px; /* Place the button at the bottom of the page */ 
+}
+
+// Search bar
+.search-bar {
+  z-index: 234;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  padding: 30px 0;
+  height: 40px;
+  width: 400px;
+  margin: 0 auto;
+
+  transition: 0.5s;
+  -moz-transition: 0.5s; /* Firefox 4 */
+  -webkit-transition:  0.5s; /* Safari and Chrome */
+  -o-transition: 0.5s; /* Opera */
+
+  form {
+    height: 42px;
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  input {
+    border: none;
+    outline: none;
+
+    width: 100%;
+    height: 42px;
+    padding-left: 40px;
+    padding-right: 46px;
+    width: 400px;
+    border-radius: 42px;
+    border: 2px solid $link-color;
+    background: $background-color;
+    transition: .3s linear;
+    float: right;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    position: absolute;
+    background: none;
+  }
+  .search-clean {
+    right: 0;
+  }
+  .search-start {
+    left: 0;
     z-index: 233; /* Make sure it does not overlap */ 
     border-width: 2px;
     border-style: solid;
@@ -797,35 +903,15 @@ footer {
       border-color: $link-color;
     }  
 
-}
+    @include mobile {
+      right: 15px;
+    }
 
-
-// Dark Mode button 
-.btn-dark {
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */ 
-  right: 30px; /* Place the button 30px from the right */ 
-  z-index: 233; /* Make sure it does not overlap */ 
-  border-width: 2px;
-  border-style: solid;
-  border-color: $link-color;
-  background-color: $link-color;
-  color: $background-color;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%; /* make it round */
-  text-align: center;
-  font-size: large;
-
-  &:visited {
-    color: $background-color;
-    border-color: $link-color;
   }
-  &:hover {
-    background-color: $background-color;
-    color: $link-color;
-    border-color: $link-color;
-  }  
+
+  @include mobile {
+    right: 15px;
+  }
 
 }
 
@@ -885,12 +971,6 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "gitalk";
-
-
-
-
-
-
 
 
 
@@ -1177,7 +1257,7 @@ body.dark-theme {
   }
   
   // Back to Top button 
-  .btn-top {
+  .btn-float {
     border-color: $link-color-dark;
     background-color: $link-color-dark;
     color: $background-color-dark;
@@ -1192,24 +1272,7 @@ body.dark-theme {
     }  
   
   }
-  
-  // Back to Top button 
-  .btn-dark {
-    border-color: $link-color-dark;
-    background-color: $link-color-dark;
-    color: $background-color-dark;
-    &:visited {
-        color: $background-color-dark;
-        border-color: $link-color-dark;
-    }
-    &:hover {
-        background-color: $background-color-dark;
-        color: $link-color-dark;
-        border-color: $link-color-dark;
-    }
-  
-  }
-  
+
   textarea {
     color: white;
   }
