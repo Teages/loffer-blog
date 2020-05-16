@@ -7,24 +7,7 @@
   <button id="btn-dark" class="btn-dark btn-float" title="Dark Mode" onclick="manualDark()">
     <i class="fa fa-moon-o fa-rotate-270" aria-hidden="true"></i>
   </button>
-  {% include nav.html %}
-
-  {% if page.toc==true %}
-  <aside class="toc">
-    {% include toc.html html=content %}
-  </aside>
-  {% endif %}
-
-  <div id="main" role="main" class="wrapper-content">
-    <div class="container">
-      {{ content }}
-    </div>
-  </div>
-
-  {% include analytics.html %}
   <!-- back to top button -->
-  <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.easing.min.js"></script>
   <script src="{{ site.url }}{{ site.baseurl }}/assets/js/back-to-top.js"></script>
   <button id="btn-top" class="btn-top btn-float" title="Go to top">
     <i class="fa fa-angle-double-up fa-lg" aria-hidden="true"></i>
@@ -48,6 +31,25 @@
       </button>
     </form>
   </dev>
+
+
+<!--  Orgain  -->
+  {% include nav.html %}
+
+  {% if page.toc==true %}
+  <aside class="toc">
+    {% include toc.html html=content %}
+  </aside>
+  {% endif %}
+
+  <div id="main" role="main" class="wrapper-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include analytics.html %}
+
 
 </body>
 

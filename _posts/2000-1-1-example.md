@@ -17,6 +17,8 @@ Copy from [younghz/Markdown](https://github.com/younghz/Markdown)
 > #### *谁*在用？
 > #### 尝试一下
 
+<!-- more -->
+
 ## 正文
 ### 1. Markdown*是什么*？
 **Markdown**是一种轻量级**标记语言**，它以纯文本形式(*易读、易写、易更改*)编写文档，并最终以HTML格式发布。    

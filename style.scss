@@ -877,7 +877,7 @@ footer {
     background: none;
   }
   .search-clean {
-    display: none;
+    //display: none;
     z-index: 3;
     right: 0;
   }
@@ -915,6 +915,15 @@ footer {
 
 }
 
+// Search result
+
+.search-result-box {
+  .search-result::before {
+     
+      margin-top: 6px;
+    
+  }
+}
 
 
 //image-cover-modal

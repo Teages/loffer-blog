@@ -36,9 +36,26 @@ toc: true
 
 # 更新
 
+## 2020.05.16
+1. 文章搜索(非模糊搜索)
+2. 夜间模式
+3. 回到顶部
+
 ## 2020.02.25
 1. 大量模块圆角化
 2. 更换了字体,现在全局使用Sans了
 
 ## 2020.02.21 
 图片现在可以点击放大了
+
+# 开源许可证
+
+## MIT
+
+[jekyll/jekyll](https://github.com/jekyll/jekyll)提供静态生成
+
+[FromEndWorld/LOFFER](https://github.com/FromEndWorld/LOFFER)提供博客主题
+
+[daviddarnes/jekyll-search-js](https://github.com/daviddarnes/jekyll-search-js)提供搜索服务
+
+> 还有更多在公开页面中获得的内容,已尽可能在对应源码处使用注释标记
