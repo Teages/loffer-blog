@@ -3,7 +3,7 @@ var searchBarON = false;
 var onSearchResultPage = false;
 
 function showSearchBar() {
-    $('#search-bar').animate({ width: '400px' });
+    $('#search-bar').animate({ width: '300px' });
     searchBarON = true;
 }
 
