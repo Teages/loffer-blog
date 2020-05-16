@@ -875,6 +875,10 @@ footer {
     cursor: pointer;
     position: absolute;
     background: none;
+    transition: 0.5s;
+    -moz-transition: 0.5s; /* Firefox 4 */
+    -webkit-transition:  0.5s; /* Safari and Chrome */
+    -o-transition: 0.5s; /* Opera */  
   }
   .search-clean {
     //display: none;
@@ -1286,5 +1290,30 @@ body.dark-theme {
     color: white;
   }
 
+  .search-bar {  
+    input {
+      border: 2px solid $link-color-dark;
+      background: $background-color-dark;
+      color: $base-color-dark;
+    }
+    .search-clean {
+      color: $base-color-dark;
+    }
+    .search-start {
+      border-color: $link-color-dark;
+      background-color: $link-color-dark;
+      color: $background-color-dark;
+
+      &:visited {
+        color: $background-color-dark;
+        border-color: $link-color-dark;
+      }
+      &:hover {
+        background-color: $background-color-dark;
+        color: $link-color-dark;
+        border-color: $link-color-dark;
+      }  
+    }
+  }
 
 }
